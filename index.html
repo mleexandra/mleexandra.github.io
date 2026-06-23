@@ -553,6 +553,7 @@
       .form-full { grid-column: 1; }
       .form-card { padding: 24px 20px; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
+      #what-included .container > div { grid-template-columns: 1fr !important; }
     }
   </style>
 </head>
@@ -560,9 +561,10 @@
 
 <!-- HEADER -->
 <header>
-  <a href="#" class="logo">🏠 <span>Риелтор</span> Санкт-Петербург</a>
+  <a href="#" class="logo">🏠 Георгий <span>Лесниченко</span></a>
   <nav>
     <a href="#benefits">Преимущества</a>
+    <a href="#services">Услуги</a>
     <a href="#how">Как работаем</a>
     <a href="#reviews">Отзывы</a>
     <a href="#consult" class="nav-cta">Записаться</a>
@@ -576,7 +578,7 @@
   <p class="hero-sub">Профессиональный риелтор с опытом 10+ лет. Полное сопровождение сделки, юридическая чистота, без лишних нервов.</p>
   <div class="hero-btns">
     <a href="#consult" class="btn-primary">Записаться на консультацию</a>
-    <a href="tel:+7XXXXXXXXXX" class="btn-outline">Позвонить</a>
+    <a href="tel:+79627234454" class="btn-outline">Позвонить</a>
   </div>
   <p class="hero-note">Бесплатно · Без обязательств · Онлайн или при встрече</p>
 </section>
@@ -717,6 +719,124 @@
   </div>
 </section>
 
+<!-- WHAT'S INCLUDED -->
+<section id="what-included" style="background: #f7f9fc;">
+  <div class="container">
+    <span class="section-label">Что входит в услуги</span>
+    <h2 class="section-title">Что входит в услуги риэлтора?</h2>
+    <p class="section-sub">Работаю с двумя типами сделок — продажей и покупкой недвижимости</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+        <div style="background: var(--blue); padding: 24px 28px;">
+          <div style="font-size: 28px; margin-bottom: 8px;">🏷️</div>
+          <h3 style="color: #fff; font-size: 20px; font-weight: 600; margin-bottom: 6px;">При продаже</h3>
+          <p style="color: rgba(255,255,255,0.75); font-size: 14px;">Продам вашу квартиру по максимальной рыночной цене</p>
+        </div>
+        <ul style="padding: 24px 28px; list-style: none; display: flex; flex-direction: column; gap: 12px;">
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span><strong style="color:var(--text);">Определение максимальной рыночной стоимости</strong> объекта</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span><strong style="color:var(--text);">Подготовка к продаже</strong> и позиционирование объекта</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span>Организация рекламной кампании (ЦИАН, Авито, Яндекс)</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span><strong style="color:var(--text);">Организация и проведение показов</strong></span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span>Переговоры с покупателями и сбор документов</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span><strong style="color:var(--text);">Организация безопасных взаиморасчётов</strong></span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span><strong style="color:var(--text);">Юридическое сопровождение</strong> и регистрация в Росреестре</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span>Помощь в безопасном переводе средств на новый объект</span></li>
+        </ul>
+        <div style="padding: 0 28px 28px;">
+          <a href="#consult" style="display:block; text-align:center; background: var(--blue); color:#fff; padding: 13px; border-radius: 50px; text-decoration:none; font-size:14px; font-weight:600; transition: background 0.2s;" onmouseover="this.style.background='#0f3570'" onmouseout="this.style.background='#1a56a0'">Записаться на консультацию</a>
+        </div>
+      </div>
+
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+        <div style="background: linear-gradient(135deg, #0f3570, #1a56a0); padding: 24px 28px;">
+          <div style="font-size: 28px; margin-bottom: 8px;">🔍</div>
+          <h3 style="color: #fff; font-size: 20px; font-weight: 600; margin-bottom: 6px;">При покупке</h3>
+          <p style="color: rgba(255,255,255,0.75); font-size: 14px;">Найду квартиру мечты и защищу от рисков</p>
+        </div>
+        <ul style="padding: 24px 28px; list-style: none; display: flex; flex-direction: column; gap: 12px;">
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span><strong style="color:var(--text);">Поиск подходящего объекта</strong> и организация просмотров</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span>Заключение предварительного соглашения с продавцом</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span><strong style="color:var(--text);">Юридическая проверка истории владения</strong> объекта</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span><strong style="color:var(--text);">Юридическая проверка продавца</strong> (долги, банкротство, дееспособность)</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span><strong style="color:var(--text);">Составление справки рисков</strong> — если вижу опасность, предупреждаю</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span>Подготовка и организация проведения сделки</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span>Составление договора купли-продажи и регистрация</span></li>
+          <li style="display: flex; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.5;"><span style="color: var(--blue); font-weight: 700; flex-shrink:0;">✓</span><span>Приём объекта по акту приёма-передачи</span></li>
+        </ul>
+        <div style="padding: 0 28px 28px;">
+          <a href="#consult" style="display:block; text-align:center; background: var(--blue); color:#fff; padding: 13px; border-radius: 50px; text-decoration:none; font-size:14px; font-weight:600; transition: background 0.2s;" onmouseover="this.style.background='#0f3570'" onmouseout="this.style.background='#1a56a0'">Записаться на консультацию</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <span class="section-label">Услуги</span>
+    <h2 class="section-title">Риэлторские услуги, которые я оказываю</h2>
+    <p class="section-sub">Профессиональные услуги — выгоднее, чем в агентствах</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; position: relative; overflow: hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background: var(--blue);"></div>
+        <div style="font-size: 32px; margin-bottom: 14px;">🏠</div>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--text);">Покупка недвижимости</h3>
+        <p style="font-size: 22px; font-weight: 700; color: var(--blue); margin-bottom: 12px;">от 2%</p>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">Подберу квартиру, проверю документы, проведу переговоры. Вторичный рынок, новостройки, загородные объекты.</p>
+        <a href="#consult" style="display:block; text-align:center; border: 1.5px solid var(--blue); color: var(--blue); padding: 10px; border-radius: 50px; text-decoration:none; font-size:13px; font-weight:600;">Купить выгодно</a>
+      </div>
+
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; position: relative; overflow: hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background: var(--blue);"></div>
+        <div style="font-size: 32px; margin-bottom: 14px;">💰</div>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--text);">Продажа недвижимости</h3>
+        <p style="font-size: 22px; font-weight: 700; color: var(--blue); margin-bottom: 12px;">от 2%</p>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">Оценю объект, подготовлю к продаже, найду покупателя и продам по максимальной рыночной цене.</p>
+        <a href="#consult" style="display:block; text-align:center; border: 1.5px solid var(--blue); color: var(--blue); padding: 10px; border-radius: 50px; text-decoration:none; font-size:13px; font-weight:600;">Продать дорого</a>
+      </div>
+
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; position: relative; overflow: hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background: var(--blue);"></div>
+        <div style="font-size: 32px; margin-bottom: 14px;">📋</div>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--text);">Сопровождение сделок</h3>
+        <p style="font-size: 22px; font-weight: 700; color: var(--blue); margin-bottom: 12px;">от 50 000 ₽</p>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">Юридическая проверка объекта и продавца, подготовка договора, безопасные расчёты, регистрация.</p>
+        <a href="#consult" style="display:block; text-align:center; border: 1.5px solid var(--blue); color: var(--blue); padding: 10px; border-radius: 50px; text-decoration:none; font-size:13px; font-weight:600;">Нужно сопровождение</a>
+      </div>
+
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; position: relative; overflow: hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background: var(--blue);"></div>
+        <div style="font-size: 32px; margin-bottom: 14px;">🏦</div>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--text);">Помощь с ипотекой</h3>
+        <p style="font-size: 22px; font-weight: 700; color: var(--blue); margin-bottom: 12px;">от 15 000 ₽</p>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">Выбор банка и программы, сбор документов, подача заявок. Знаю, где одобряют сложные случаи.</p>
+        <a href="#consult" style="display:block; text-align:center; border: 1.5px solid var(--blue); color: var(--blue); padding: 10px; border-radius: 50px; text-decoration:none; font-size:13px; font-weight:600;">Получить ипотеку</a>
+      </div>
+
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; position: relative; overflow: hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background: var(--yellow);"></div>
+        <div style="font-size: 32px; margin-bottom: 14px;">🏗️</div>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--text);">Подбор новостройки</h3>
+        <p style="font-size: 22px; font-weight: 700; color: #27a857; margin-bottom: 12px;">Бесплатно</p>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">Подбор среди всех ЖК Санкт-Петербурга. Проверка застройщика и ДДУ. Для покупателя — бесплатно.</p>
+        <a href="#consult" style="display:block; text-align:center; border: 1.5px solid var(--blue); color: var(--blue); padding: 10px; border-radius: 50px; text-decoration:none; font-size:13px; font-weight:600;">Подобрать новостройку</a>
+      </div>
+
+      <div style="background: var(--blue); border-radius: var(--radius); padding: 28px 24px;">
+        <div style="font-size: 32px; margin-bottom: 14px;">📈</div>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 6px; color: #fff;">Инвестиции в недвижимость</h3>
+        <p style="font-size: 22px; font-weight: 700; color: var(--yellow); margin-bottom: 12px;">Выгодно</p>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 16px;">Составлю стратегию в зависимости от цели и бюджета. Знаю, что приносит доход в петербургском рынке.</p>
+        <a href="#consult" style="display:block; text-align:center; background: var(--yellow); color: #1a3a6e; padding: 10px; border-radius: 50px; text-decoration:none; font-size:13px; font-weight:600;">Консультация по инвестициям</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- FORM -->
 <section id="consult" class="form-section">
   <div class="form-inner">
@@ -767,15 +887,14 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <!-- ✏️ ЗАМЕНИТЕ на ваше имя -->
-      <p class="footer-name">Имя Фамилия · Риелтор</p>
+      <p class="footer-name">Георгий Лесниченко · Риелтор</p>
       <p class="footer-desc">Жилая недвижимость · Санкт-Петербург</p>
     </div>
     <div class="footer-contacts">
       <!-- ✏️ ЗАМЕНИТЕ на ваши контакты -->
-      <a href="tel:+7XXXXXXXXXX">📞 +7 (XXX) XXX-XX-XX</a>
-      <a href="https://t.me/username">✈️ Telegram</a>
-      <a href="https://wa.me/7XXXXXXXXXX">💬 WhatsApp</a>
+      <a href="tel:+79627234454">📞 +7 (962) 723-44-54</a>
+      <a href="https://t.me/+79627234454">✈️ Telegram</a>
+      <a href="https://wa.me/79627234454">💬 WhatsApp</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -807,11 +926,10 @@
     4. Узнайте ваш chat_id: напишите @userinfobot
     5. Вставьте chat_id ниже
 
-    Раскомментируйте код ниже после заполнения:
-    ========================================================
+    */
 
-    const BOT_TOKEN = 'ВАШ_ТОКЕН_ЗДЕСЬ';
-    const CHAT_ID = 'ВАШ_CHAT_ID_ЗДЕСЬ';
+    const BOT_TOKEN = '8205131681:AAH9Rv8dK1d6EdipJb2qF_6qYrOxL10X-HE';
+    const CHAT_ID = '1352545899';
     const comment = document.getElementById('comment').value.trim();
 
     const message = `
@@ -828,8 +946,6 @@
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ chat_id: CHAT_ID, text: message })
     });
-    ========================================================
-    */
 
     document.getElementById('form-body').style.display = 'none';
     document.getElementById('success-msg').style.display = 'block';
