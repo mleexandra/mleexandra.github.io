@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Риелтор в Санкт-Петербурге — покупка и продажа квартир</title>
+  <meta name="description" content="Профессиональный риелтор в Санкт-Петербурге. Помогу купить или продать квартиру выгодно и безопасно. Запись на бесплатную консультацию." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #1a56a0;
+      --blue-dark: #0f3570;
+      --blue-light: #e8f1fb;
+      --yellow: #ffd84d;
+      --yellow-dark: #e6b800;
+      --text: #1a1a2e;
+      --text-muted: #5a6a82;
+      --border: #dce5f0;
+      --bg: #f7f9fc;
+      --white: #ffffff;
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--text); font-weight: 400; }
+
+    nav { display: flex; gap: 28px; align-items: center; }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--blue); }
+
+    .nav-cta {
+      background: var(--blue);
+      color: var(--white) !important;
+      padding: 9px 22px;
+      border-radius: 50px;
+      font-size: 14px !important;
+      font-weight: 500;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--blue-dark) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0f3570 0%, #1a56a0 55%, #2a7fd4 100%);
+      padding: 80px 32px 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: var(--white);
+      clip-path: ellipse(60% 100% at 50% 100%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      font-size: 13px;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--yellow);
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.82);
+      font-size: 18px;
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--yellow);
+      color: #1a3a6e;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-2px); }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 500;
+      padding: 15px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
+
+    .hero-note {
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    /* ── STATS ── */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      max-width: 680px;
+      margin: -10px auto 0;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(26,86,160,0.08);
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat {
+      flex: 1;
+      text-align: center;
+      padding: 24px 16px;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--blue);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ── SECTIONS ── */
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    section { padding: 72px 0; }
+
+    .section-label {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 44px;
+      max-width: 520px;
+    }
+
+    /* ── BENEFITS ── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 16px;
+    }
+
+    .benefit-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .benefit-card:hover { box-shadow: 0 6px 20px rgba(26,86,160,0.1); transform: translateY(-2px); }
+
+    .benefit-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--blue-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+
+    .benefit-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .benefit-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── STEPS ── */
+    .steps { display: flex; flex-direction: column; gap: 0; }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 32px;
+      position: relative;
+    }
+    .step:last-child { padding-bottom: 0; }
+
+    .step-left { display: flex; flex-direction: column; align-items: center; }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-line {
+      flex: 1;
+      width: 2px;
+      background: var(--border);
+      margin-top: 6px;
+    }
+    .step:last-child .step-line { display: none; }
+
+    .step-body { padding-top: 8px; }
+
+    .step-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .step-text { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+    /* ── REVIEWS ── */
+    .reviews-bg { background: var(--bg); }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    .review {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .stars { color: #f5a623; font-size: 15px; margin-bottom: 12px; letter-spacing: 1px; }
+
+    .review-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .reviewer { display: flex; align-items: center; gap: 12px; }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .reviewer-name { font-size: 14px; font-weight: 600; color: var(--text); }
+    .reviewer-sub { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+
+    /* ── FORM ── */
+    .form-section { background: var(--blue); }
+
+    .form-inner {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .form-section .section-label {
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+    }
+
+    .form-section .section-title { color: var(--white); }
+    .form-section .section-sub { color: rgba(255,255,255,0.75); max-width: 100%; }
+
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      text-align: left;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-full { grid-column: 1 / -1; }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      width: 100%;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(26,86,160,0.1);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 80px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 50px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--blue-dark); }
+
+    .form-privacy {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    /* Success state */
+    .success-msg {
+      display: none;
+      text-align: center;
+      padding: 32px;
+      color: var(--blue);
+    }
+    .success-msg .checkmark { font-size: 48px; margin-bottom: 12px; }
+    .success-msg h3 { font-size: 20px; margin-bottom: 8px; }
+    .success-msg p { color: var(--text-muted); font-size: 14px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0a1f42;
+      padding: 40px 32px;
+    }
+
+    .footer-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-name {
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .footer-desc {
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .footer-contacts { display: flex; gap: 20px; flex-wrap: wrap; }
+
+    .footer-contacts a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .footer-contacts a:hover { color: var(--white); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 28px;
+      padding-top: 20px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      header { padding: 12px 16px; }
+      nav a:not(.nav-cta) { display: none; }
+      .hero { padding: 56px 16px 64px; }
+      .hero h1 { font-size: 28px; }
+      .hero-sub { font-size: 16px; }
+      .stats { flex-direction: column; border-radius: var(--radius); }
+      .stat { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat:last-child { border-bottom: none; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-full { grid-column: 1; }
+      .form-card { padding: 24px 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo">🏠 <span>Риелтор</span> Санкт-Петербург</a>
+  <nav>
+    <a href="#benefits">Преимущества</a>
+    <a href="#how">Как работаем</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#consult" class="nav-cta">Записаться</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">📍 Санкт-Петербург</div>
+  <h1>Помогу купить или продать квартиру <em>выгодно и безопасно</em></h1>
+  <p class="hero-sub">Профессиональный риелтор с опытом 10+ лет. Полное сопровождение сделки, юридическая чистота, без лишних нервов.</p>
+  <div class="hero-btns">
+    <a href="#consult" class="btn-primary">Записаться на консультацию</a>
+    <a href="tel:+7XXXXXXXXXX" class="btn-outline">Позвонить</a>
+  </div>
+  <p class="hero-note">Бесплатно · Без обязательств · Онлайн или при встрече</p>
+</section>
+
+<!-- STATS -->
+<div class="container">
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-num">300+</span>
+      <div class="stat-label">сделок закрыто</div>
+    </div>
+    <div class="stat">
+      <span class="stat-num">10 лет</span>
+      <div class="stat-label">опыт работы</div>
+    </div>
+    <div class="stat">
+      <span class="stat-num">98%</span>
+      <div class="stat-label">довольных клиентов</div>
+    </div>
+    <div class="stat">
+      <span class="stat-num">14 дней</span>
+      <div class="stat-label">средний срок продажи</div>
+    </div>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <div class="container">
+    <span class="section-label">Почему я</span>
+    <h2 class="section-title">Сопровождаю на каждом шаге</h2>
+    <p class="section-sub">От первого звонка до ключей в руках — работаю так, чтобы вы не переживали ни о чём</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🛡️</div>
+        <p class="benefit-title">Юридическая безопасность</p>
+        <p class="benefit-text">Проверяю историю объекта и все документы, чтобы сделка прошла чисто и без сюрпризов</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📈</div>
+        <p class="benefit-title">Лучшая цена</p>
+        <p class="benefit-text">Анализирую рынок и торгуюсь так, чтобы вы продали дороже или купили дешевле</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <p class="benefit-title">Быстрые сроки</p>
+        <p class="benefit-text">Оперативно нахожу покупателей, организую показы и не даю сделке затянуться</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📞</div>
+        <p class="benefit-title">На связи 24/7</p>
+        <p class="benefit-text">Отвечаю на вопросы в любое время на протяжении всей сделки</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background: #f7f9fc;">
+  <div class="container">
+    <span class="section-label">Как работаем</span>
+    <h2 class="section-title">4 шага до успешной сделки</h2>
+    <p class="section-sub">Прозрачный процесс без лишних встреч и бюрократии</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-left"><div class="step-num">1</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <p class="step-title">Бесплатная консультация</p>
+          <p class="step-text">Разбираемся в вашей ситуации, обсуждаем цели и составляем план действий. Онлайн или при встрече — как удобно вам.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num">2</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <p class="step-title">Подбор вариантов или оценка</p>
+          <p class="step-text">Формирую список подходящих объектов по вашим критериям, или провожу профессиональную оценку вашей квартиры по рынку.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num">3</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <p class="step-title">Показы и переговоры</p>
+          <p class="step-text">Организую просмотры в удобное время, веду переговоры и добиваюсь лучших условий для вас.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num">4</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <p class="step-title">Сделка и ключи</p>
+          <p class="step-text">Сопровождаю на подписании договора, помогаю с ипотекой и регистрацией права собственности. Вы получаете ключи без стресса.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-bg">
+  <div class="container">
+    <span class="section-label">Отзывы</span>
+    <h2 class="section-title">Что говорят клиенты</h2>
+    <p class="section-sub">Реальные истории людей, которым я помог с недвижимостью</p>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">Продала квартиру за 10 дней по цене выше рынка. Всё оформила быстро и без стресса. Очень рекомендую!</p>
+        <div class="reviewer">
+          <div class="avatar">АК</div>
+          <div>
+            <p class="reviewer-name">Анна К.</p>
+            <p class="reviewer-sub">Продажа · Петроградский р-н</p>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">Помогли найти квартиру мечты в нашем бюджете. Были на связи до позднего вечера — это дорогого стоит.</p>
+        <div class="reviewer">
+          <div class="avatar">СМ</div>
+          <div>
+            <p class="reviewer-name">Сергей М.</p>
+            <p class="reviewer-sub">Покупка · Московский р-н</p>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">Ипотека, сложная цепочка — всё разрулили без единой нервотрёпки. Спасибо за профессионализм!</p>
+        <div class="reviewer">
+          <div class="avatar">ЕВ</div>
+          <div>
+            <p class="reviewer-name">Елена В.</p>
+            <p class="reviewer-sub">Обмен · Василеостровский</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="consult" class="form-section">
+  <div class="form-inner">
+    <span class="section-label">Консультация</span>
+    <h2 class="section-title">Запишитесь бесплатно</h2>
+    <p class="section-sub" style="margin-bottom: 32px;">Оставьте заявку — свяжусь с вами в течение 30 минут</p>
+
+    <div class="form-card">
+      <div id="form-body">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" placeholder="Иван Иванов" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" placeholder="+7 (XXX) XXX-XX-XX" required />
+          </div>
+          <div class="form-group form-full">
+            <label for="goal">Что вас интересует?</label>
+            <select id="goal">
+              <option value="" disabled selected>Выберите...</option>
+              <option>Купить квартиру</option>
+              <option>Продать квартиру</option>
+              <option>Обмен недвижимости</option>
+              <option>Консультация по ипотеке</option>
+              <option>Оценка квартиры</option>
+            </select>
+          </div>
+          <div class="form-group form-full">
+            <label for="comment">Комментарий (необязательно)</label>
+            <textarea id="comment" placeholder="Расскажите подробнее о вашем запросе..."></textarea>
+          </div>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Отправить заявку →</button>
+        <p class="form-privacy">🔒 Данные защищены. Никакого спама — только звонок от меня.</p>
+      </div>
+      <div class="success-msg" id="success-msg">
+        <div class="checkmark">✅</div>
+        <h3>Заявка отправлена!</h3>
+        <p>Свяжусь с вами в течение 30 минут.<br>Спасибо, что выбрали меня!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <!-- ✏️ ЗАМЕНИТЕ на ваше имя -->
+      <p class="footer-name">Имя Фамилия · Риелтор</p>
+      <p class="footer-desc">Жилая недвижимость · Санкт-Петербург</p>
+    </div>
+    <div class="footer-contacts">
+      <!-- ✏️ ЗАМЕНИТЕ на ваши контакты -->
+      <a href="tel:+7XXXXXXXXXX">📞 +7 (XXX) XXX-XX-XX</a>
+      <a href="https://t.me/username">✈️ Telegram</a>
+      <a href="https://wa.me/7XXXXXXXXXX">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Все права защищены</span>
+    <span>Санкт-Петербург, Россия</span>
+  </div>
+</footer>
+
+<script>
+  function submitForm() {
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const goal = document.getElementById('goal').value;
+
+    if (!name || !phone) {
+      alert('Пожалуйста, заполните имя и телефон');
+      return;
+    }
+
+    /*
+    ========================================================
+    📬 ПОДКЛЮЧЕНИЕ TELEGRAM-БОТА
+    ========================================================
+    Чтобы заявки приходили в Telegram:
+
+    1. Напишите @BotFather в Telegram
+    2. Создайте бота командой /newbot
+    3. Скопируйте токен и вставьте ниже
+    4. Узнайте ваш chat_id: напишите @userinfobot
+    5. Вставьте chat_id ниже
+
+    Раскомментируйте код ниже после заполнения:
+    ========================================================
+
+    const BOT_TOKEN = 'ВАШ_ТОКЕН_ЗДЕСЬ';
+    const CHAT_ID = 'ВАШ_CHAT_ID_ЗДЕСЬ';
+    const comment = document.getElementById('comment').value.trim();
+
+    const message = `
+🏠 Новая заявка с сайта!
+
+👤 Имя: ${name}
+📞 Телефон: ${phone}
+🎯 Интерес: ${goal || 'не указан'}
+💬 Комментарий: ${comment || 'нет'}
+    `.trim();
+
+    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: CHAT_ID, text: message })
+    });
+    ========================================================
+    */
+
+    document.getElementById('form-body').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
+
+  // Плавная прокрутка для навигации
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+</body>
+</html>
