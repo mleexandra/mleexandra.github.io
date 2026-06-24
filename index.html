@@ -613,7 +613,10 @@
 
 <!-- HEADER -->
 <header>
-  <a href="#" class="logo">🏠 Георгий <span>Лесниченко</span></a>
+  <div style="display:flex; flex-direction:column; gap:2px;">
+    <div style="font-size:12px; color:var(--text-muted); font-weight:400; line-height:1;">🏠 Ваш риелтор</div>
+    <div style="font-size:16px; color:var(--blue); font-weight:600; line-height:1;">Георгий Лесниченко</div>
+  </div>
   <nav>
     <a href="#benefits">Преимущества</a>
     <a href="#services">Услуги</a>
@@ -636,7 +639,7 @@
     <p class="hero-sub">Профессиональный риелтор с опытом 10+ лет. Полное сопровождение сделки, юридическая чистота, без лишних нервов.</p>
     <div class="hero-btns">
       <a href="#consult" class="btn-primary">Записаться на консультацию</a>
-      <a href="tel:+79627234454" class="btn-outline">Позвонить</a>
+      <a href="tel:+79627234454" class="btn-outline">📞 +7 (962) 723-44-54</a>
     </div>
     <p class="hero-note">Бесплатно · Без обязательств · Онлайн или при встрече</p>
     <div class="slide-dots">
@@ -699,7 +702,7 @@
     <span class="section-label">Почему я</span>
     <h2 class="section-title">Сопровождаю на каждом шаге</h2>
     <p class="section-sub">От первого звонка до ключей в руках — работаю так, чтобы вы не переживали ни о чём</p>
-    <div class="benefits-grid">
+    <div class="benefits-grid" style="grid-template-columns: repeat(4, 1fr);">
       <div class="benefit-card">
         <div class="benefit-icon">🛡️</div>
         <p class="benefit-title">Юридическая безопасность</p>
